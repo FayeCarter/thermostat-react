@@ -11,6 +11,10 @@ export class Thermostat extends Component {
   up = () => {
     this.setState({temp: this.state.temp + 1});
   }
+
+  down = () => {
+    this.setState({temp: this.state.temp - 1});
+  }
   
   render() {
     return (
@@ -18,6 +22,7 @@ export class Thermostat extends Component {
         <h1>Thermostat</h1>
         <p id="temp">Temperature: {this.state.temp}</p>
         <button id="up" onClick={this.up}>+</button>
+        <button id="down" onClick={this.down}>-</button>
       </div>
     );
   }

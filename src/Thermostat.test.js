@@ -21,5 +21,10 @@ describe(Thermostat, () => {
     wrap.find('#up').simulate('click')
     expect(wrap.find('#temp').text()).toEqual('Temperature: 21')
   });
+
+  it('has a down button that will decrease the temperature', () => {
+    wrap.find('#down').simulate('click')
+    expect(wrap.find('#temp').text()).toEqual('Temperature: 19')
+  });
 })
   
