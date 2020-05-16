@@ -4,7 +4,8 @@ export class Thermostat extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      temp: 20
+      temp: 20,
+      MINIMUM_TEMP: 10
     }
   }
 
@@ -13,7 +14,7 @@ export class Thermostat extends Component {
   }
 
   down = () => {
-    if( this.state.temp > 10 ) {
+    if( this.state.temp > this.state.MINIMUM_TEMP ) {
       this.setState({temp: this.state.temp - 1});
     }
   }
