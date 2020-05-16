@@ -12,7 +12,7 @@ This project is an recreation of [this](https://github.com/FayeCarter/thermostat
 - [X] If power saving mode is on, the maximum temperature is 25 degrees
 - [X] If power saving mode is off, the maximum temperature is 32 degrees
 - [X] Power saving mode is on by default
-- [ ] Power saving mode can be toggled
+- [X] Power saving mode can be toggled
 - [ ] You can reset the temperature to 20 with a reset function
 - [ ] You can ask about the thermostat's current energy usage: < 18 is low-usage, < 25 is medium-usage, anything else is high-usage.
 - [ ] (In the challenges where we add an interface, low-usage will be indicated with green, medium-usage indicated with black, high-usage indicated with red.)

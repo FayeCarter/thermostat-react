@@ -35,7 +35,7 @@ describe(Thermostat, () => {
   });
 
   it('has a maximum temperature of 25 degrees in power saving mode', () => {
-    wrap.find('#power-save').simulate('click');
+    expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: On')
     for (let i = 0; i < 6; i++) {
       wrap.find('#up').simulate('click');
     }
@@ -43,6 +43,8 @@ describe(Thermostat, () => {
   });
 
   it('has a maximum temperature of 32 degrees', () => {
+    wrap.find('#power-save').simulate('click');
+    // expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: Off');
     for (let i = 0; i < 13; i++) {
       wrap.find('#up').simulate('click');
     }
@@ -50,6 +52,13 @@ describe(Thermostat, () => {
   });
 
   it('has power saving on by default', () => {
+    expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: On')
+  });
+
+  it('has power saving can be toggled', () => {
+    wrap.find('#power-save').simulate('click');
+    expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: Off')
+    wrap.find('#power-save').simulate('click');
     expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: On')
   });
 })
