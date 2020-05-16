@@ -5,7 +5,7 @@ This project is an recreation of [this](https://github.com/FayeCarter/thermostat
 
 ## Specification
 
-- [ ] Thermostat starts at 20 degrees
+- [X] Thermostat starts at 20 degrees
 - [ ] You can increase the temperature with an up function
 - [ ] You can decrease the temperature with a down function
 - [ ] The minimum temperature is 10 degrees
