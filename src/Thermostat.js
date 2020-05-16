@@ -3,12 +3,17 @@ import React, { Component } from 'react';
 export class Thermostat extends Component {
   constructor(props) {
     super(props);
+    this.default = 20,
+    this.minTemp = 10,
     this.state = {
-      temp: 20,
-      minTemp: 10,
       maxTemp: 25,
+      temp: this.default,
       powerSaving: true
     }
+  }
+
+  reset = () => {
+    this.setState({temp: this.default});
   }
 
   up = () => {
@@ -18,7 +23,7 @@ export class Thermostat extends Component {
   }
 
   down = () => {
-    if( this.state.temp > this.state.minTemp ) {
+    if( this.state.temp > this.minTemp ) {
       this.setState({temp: this.state.temp - 1});
     }
   }
@@ -38,6 +43,7 @@ export class Thermostat extends Component {
         <p id="temp">Temperature: {this.state.temp}</p>
         <p id="psm">Power Saving Mode: {powerSaving}</p>
         <button id="power-save" onClick={this.powerSave}>Power Save</button>
+        <button id="reset" onClick={this.reset}>Reset</button>
         <button id="up" onClick={this.up}>+</button>
         <button id="down" onClick={this.down}>-</button>
       </div>

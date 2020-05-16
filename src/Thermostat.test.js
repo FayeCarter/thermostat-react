@@ -61,5 +61,13 @@ describe(Thermostat, () => {
     wrap.find('#power-save').simulate('click');
     expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: On')
   });
+
+  it('temperature can be reset to 20t', () => {
+    for (let i = 0; i < 7; i++) {
+      wrap.find('#up').simulate('click');
+    }
+    wrap.find('#reset').simulate('click');
+    expect(wrap.find('#temp').text()).toEqual('Temperature: 20')
+  });
 })
   
