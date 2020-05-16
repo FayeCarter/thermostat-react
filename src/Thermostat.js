@@ -5,18 +5,27 @@ export class Thermostat extends Component {
     super(props);
     this.state = {
       temp: 20,
-      MINIMUM_TEMP: 10
+      minTemp: 10,
+      maxTemp: 32,
+      powerSaving: false
     }
   }
 
   up = () => {
-    this.setState({temp: this.state.temp + 1});
+    if( this.state.temp < this.state.maxTemp ) {
+      this.setState({temp: this.state.temp + 1});
+    }
   }
 
   down = () => {
-    if( this.state.temp > this.state.MINIMUM_TEMP ) {
+    if( this.state.temp > this.state.minTemp ) {
       this.setState({temp: this.state.temp - 1});
     }
+  }
+
+  powerSave = () => {
+    this.setState({powerSaving: true})
+    this.setState({maxTemp: 25})
   }
   
   render() {
@@ -24,6 +33,7 @@ export class Thermostat extends Component {
       <div className="Thermostat">
         <h1>Thermostat</h1>
         <p id="temp">Temperature: {this.state.temp}</p>
+        <button id="power-save" onClick={this.powerSave}>+</button>
         <button id="up" onClick={this.up}>+</button>
         <button id="down" onClick={this.down}>-</button>
       </div>

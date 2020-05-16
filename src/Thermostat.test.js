@@ -28,12 +28,25 @@ describe(Thermostat, () => {
   });
 
   it('has a minimum temperature of 10 degrees', () => {
-    
-
     for (let i = 0; i < 11; i++) {
       wrap.find('#down').simulate('click');
     }
     expect(wrap.find('#temp').text()).toEqual('Temperature: 10')
+  });
+
+  it('has a maximum temperature of 25 degrees in power saving mode', () => {
+    wrap.find('#power-save').simulate('click');
+    for (let i = 0; i < 6; i++) {
+      wrap.find('#up').simulate('click');
+    }
+    expect(wrap.find('#temp').text()).toEqual('Temperature: 25')
+  });
+
+  it('has a maximum temperature of 32 degrees', () => {
+    for (let i = 0; i < 13; i++) {
+      wrap.find('#up').simulate('click');
+    }
+    expect(wrap.find('#temp').text()).toEqual('Temperature: 32')
   });
 })
   
