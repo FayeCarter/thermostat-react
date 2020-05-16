@@ -48,5 +48,9 @@ describe(Thermostat, () => {
     }
     expect(wrap.find('#temp').text()).toEqual('Temperature: 32')
   });
+
+  it('has power saving on by default', () => {
+    expect(wrap.find('#psm').text()).toEqual('Power Saving Mode: On')
+  });
 })
   

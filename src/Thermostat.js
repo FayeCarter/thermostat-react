@@ -7,7 +7,7 @@ export class Thermostat extends Component {
       temp: 20,
       minTemp: 10,
       maxTemp: 32,
-      powerSaving: false
+      powerSaving: "On"
     }
   }
 
@@ -24,7 +24,7 @@ export class Thermostat extends Component {
   }
 
   powerSave = () => {
-    this.setState({powerSaving: true})
+    this.setState({powerSaving: "Off"})
     this.setState({maxTemp: 25})
   }
   
@@ -33,6 +33,7 @@ export class Thermostat extends Component {
       <div className="Thermostat">
         <h1>Thermostat</h1>
         <p id="temp">Temperature: {this.state.temp}</p>
+        <p id="psm">Power Saving Mode: {this.state.powerSaving}</p>
         <button id="power-save" onClick={this.powerSave}>+</button>
         <button id="up" onClick={this.up}>+</button>
         <button id="down" onClick={this.down}>-</button>
