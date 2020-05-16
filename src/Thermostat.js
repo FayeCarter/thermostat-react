@@ -13,7 +13,9 @@ export class Thermostat extends Component {
   }
 
   down = () => {
-    this.setState({temp: this.state.temp - 1});
+    if( this.state.temp > 10 ) {
+      this.setState({temp: this.state.temp - 1});
+    }
   }
   
   render() {

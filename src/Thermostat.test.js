@@ -26,5 +26,14 @@ describe(Thermostat, () => {
     wrap.find('#down').simulate('click')
     expect(wrap.find('#temp').text()).toEqual('Temperature: 19')
   });
+
+  it('has a minimum temperature of 10 degrees', () => {
+    
+
+    for (let i = 0; i < 11; i++) {
+      wrap.find('#down').simulate('click');
+    }
+    expect(wrap.find('#temp').text()).toEqual('Temperature: 10')
+  });
 })
   
