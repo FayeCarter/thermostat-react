@@ -42,29 +42,27 @@ export class Thermostat extends Component {
   render() {
     let powerSaving = this.state.powerSaving ? 'On' : 'Off'
     return (
-      <div>
-      <div className="Thermostat">
-        <h1>Thermostat</h1>
-        <p id="temp">Temperature: {this.state.temp}</p>
-        <p id="psm">Power Saving Mode: {powerSaving}</p>
-        <button id="power-save" onClick={this.powerSave}>Power Save</button>
-        <button id="reset" onClick={this.reset}>Reset</button>
-        <button id="up" onClick={this.up}>+</button>
-        <button id="down" onClick={this.down}>-</button>
-      </div>
-      
-      <div className="Thermometer">
-        <Thermometer
-            min={0}
-            max={35}
-            width={20}
-            height={300}
-            theme="light"
-            value={this.state.temp}
-            size="large"
-            height="300"
-        />
-      </div>
+      <div id="container">
+        <div className="Thermostat">
+          {/* <h1>Thermostat</h1> */}
+          <p id="temp">Temperature: {this.state.temp}</p>
+          <p id="psm">Power Saving Mode: {powerSaving}</p>
+          <button id="power-save" onClick={this.powerSave}>Mode</button>
+          <button id="reset" onClick={this.reset}>Reset</button>
+          <button id="up" onClick={this.up}>+</button>
+          <button id="down" onClick={this.down}>-</button>
+        </div>
+        
+        <div className="Thermometer">
+          <Thermometer
+              min={0}
+              max={35}
+              theme="light"
+              value={this.state.temp}
+              size="large"
+              height="300"
+          />
+        </div>
       </div>
     );
   }

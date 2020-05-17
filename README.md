@@ -1,6 +1,8 @@
 # Thermostat - React
 
 ## About
+
+First attempt at building a react app and useing Jes/Enzyme to test
 This project is an recreation of [this](https://github.com/FayeCarter/thermostat) project using React.
 
 ## Specification
@@ -15,6 +17,12 @@ This project is an recreation of [this](https://github.com/FayeCarter/thermostat
 - [X] Power saving mode can be toggled
 - [X] You can reset the temperature to 20 with a reset function
 
-## Documentation
+# How to run
 
-I have documented my learning [here](https://github.com/FayeCarter/thermostat-react/wiki)
+```bash
+  npm install
+  npm test # Run the tests to ensure it works
+  npm start
+```
+
+View project on localhost:3000
