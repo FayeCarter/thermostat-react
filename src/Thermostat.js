@@ -1,10 +1,11 @@
 import React, { Component } from 'react';
+import Thermometer from 'react-thermometer-component'
 
 export class Thermostat extends Component {
   constructor(props) {
     super(props);
-    this.default = 20,
-    this.minTemp = 10,
+    this.default = 20;
+    this.minTemp = 10;
     this.state = {
       maxTemp: 25,
       temp: this.default,
@@ -33,11 +34,15 @@ export class Thermostat extends Component {
       powerSaving: !this.state.powerSaving,
       maxTemp: !this.state.powerSaving ? 25 : 32
     })
+    if(this.state.temp > 25) {
+      this.state.temp = 25;
+    }
   }
   
   render() {
     let powerSaving = this.state.powerSaving ? 'On' : 'Off'
     return (
+      <div>
       <div className="Thermostat">
         <h1>Thermostat</h1>
         <p id="temp">Temperature: {this.state.temp}</p>
@@ -46,6 +51,20 @@ export class Thermostat extends Component {
         <button id="reset" onClick={this.reset}>Reset</button>
         <button id="up" onClick={this.up}>+</button>
         <button id="down" onClick={this.down}>-</button>
+      </div>
+      
+      <div className="Thermometer">
+        <Thermometer
+            min={0}
+            max={35}
+            width={20}
+            height={300}
+            theme="light"
+            value={this.state.temp}
+            size="large"
+            height="300"
+        />
+      </div>
       </div>
     );
   }
