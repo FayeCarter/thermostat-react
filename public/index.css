@@ -1,8 +1,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background: rgb(49, 54, 68);
-  color: #fff;
+  background: rgb(216, 215, 215);
+  color: rgb(28, 27, 27);
   width: 100vw;
   height: 100vh;
   display: flex;
@@ -15,29 +15,37 @@ body {
   display: flex;
 }
 
-.thermostat {
+.Thermostat {
   display: flex;
+  flex-direction: column;
+  margin: 50px;
+  text-align: center;
 }
 
+.thermometer {
+  margin: 50px;
+}
 
 button {
-  margin: 10px;
-  height: 60px;
-  width: 60px;
+  font-size: 1.25em;
+  height: 80px;
+  width: 80px;
   outline: none;
-  border-radius: 40%;
-  background-color: #EBECF0;
-  text-shadow: 1px 1px 0 #FFF;
-  color:#61677C;
+  border-radius: 45%;
+  background-color: rgb(28, 27, 27);
+  color: white;
   font-weight: bold;
-  box-shadow: -5px -5px 20px rgb(63, 60, 60),  5px 5px 20px rgb(33, 33, 35);
   transition: all 0.2s ease-in-out;
 }
 
 button:hover {
-  box-shadow: -2px -2px 5px rgb(63, 60, 60), 2px 2px 5px rgb(33, 33, 35);
+  background-color: rgb(66, 65, 65);
 }
 
 button:active {
-  box-shadow: inset 1px 1px 2px rgb(63, 60, 60), inset -1px -1px 2px rgb(33, 33, 35);
+  background-color: rgb(7, 7, 7);
 }
+.tempControl {
+  font-size: 1.75em;
+}
+

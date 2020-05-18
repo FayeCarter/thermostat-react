@@ -47,10 +47,14 @@ export class Thermostat extends Component {
           {/* <h1>Thermostat</h1> */}
           <p id="temp">Temperature: {this.state.temp}</p>
           <p id="psm">Power Saving Mode: {powerSaving}</p>
-          <button id="power-save" onClick={this.powerSave}>Mode</button>
-          <button id="reset" onClick={this.reset}>Reset</button>
-          <button id="up" onClick={this.up}>+</button>
-          <button id="down" onClick={this.down}>-</button>
+          <div className="buttons">
+            <button id="power-save" onClick={this.powerSave}>Mode</button>
+            <button id="reset" onClick={this.reset}>Reset</button>
+            <div className="tempControl">
+              <button id="up" onClick={this.up}>+</button>
+              <button id="down" onClick={this.down}>-</button>
+            </div>
+          </div>
         </div>
         
         <div className="Thermometer">
