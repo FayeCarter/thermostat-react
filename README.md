@@ -4,7 +4,7 @@
 
 First attempt at building a react app and useing Jest/Enzyme to test
 This project is an recreation of [this](https://github.com/FayeCarter/thermostat) project using React.
-Project with basic styling available [here]("https://fayecarter.github.io/thermostat-react/")
+Project with basic styling available "https://fayecarter.github.io/thermostat-react/"
 
 ## Specification
 
