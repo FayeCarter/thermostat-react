@@ -1,0 +1,51 @@
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: rgb(216, 215, 215);
+  color: rgb(28, 27, 27);
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+#container {
+  display: flex;
+}
+
+.Thermostat {
+  display: flex;
+  flex-direction: column;
+  margin: 50px;
+  text-align: center;
+}
+
+.thermometer {
+  margin: 50px;
+}
+
+button {
+  font-size: 1.25em;
+  height: 80px;
+  width: 80px;
+  outline: none;
+  border-radius: 45%;
+  background-color: rgb(28, 27, 27);
+  color: white;
+  font-weight: bold;
+  transition: all 0.2s ease-in-out;
+}
+
+button:hover {
+  background-color: rgb(66, 65, 65);
+}
+
+button:active {
+  background-color: rgb(7, 7, 7);
+}
+.tempControl {
+  font-size: 1.75em;
+}
+
